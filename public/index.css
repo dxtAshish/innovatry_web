@@ -1,0 +1,11 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    margin: 2px auto;
+}
+.logo
+{
+   font-weight: 500;
+}
