@@ -69,7 +69,7 @@ export default function Buy() {
         <div className="row">
           <div className="col-md-4">
             <img
-              src="https://via.placeholder.com/300x200"
+              src={productData.image}
               alt="Product Image"
               className="img-fluid"
             />

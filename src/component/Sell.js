@@ -12,30 +12,19 @@ export default function Sell() {
   });
 
   const [imageUrl, setImageUrl] = useState();
-  const [file, setFile] = useState();
-
-  useEffect(() => {
-    if (!file) {
-      var formData = new FormData();
-      formData.append("photo", file);
-    }
-  }, [file]);
-
-  useEffect(() => {
-    if (file) {
-      uploadImage();
-    }
-  }, []);
+  // const [file, setFile] = useState();
 
   // const uploadImage = async (file) => {
-  const uploadImage = async (file) => {
+  const uploadImage = (file) => {
     // .preventDefault();
     console.log(file, "file");
     // Create a new FormData object
     var formData = new FormData();
-
     // Append the image file to the FormData object
-    formData.append("photo", file);
+    for (let i = 0; i < file.length; i++) {
+      formData.append("photo", file[i]);
+    }
+    
     console.log(formData, "formData");
     // Send the FormData object to the server
     fetch("http://localhost:5000/api/upload/uploadimage", {
@@ -43,7 +32,7 @@ export default function Sell() {
       body: formData,
     })
       .then((response) => response.json())
-      .then((data) => console.log(data))
+      .then((data) => setImageUrl(data.secure_url))
       .catch((error) => console.error(error));
     // setImageUrl(response.secure_url);
   };
@@ -55,6 +44,7 @@ export default function Sell() {
 
   useEffect(() => {
     if (imageUrl) {
+      console.log("here 47 ")
       setState({ ...state, image: imageUrl });
     }
   }, [imageUrl]);
@@ -67,10 +57,11 @@ export default function Sell() {
       "auth-token": token,
     };
     const body = JSON.stringify({
-      title:state.title,
-      description:state.description,
+      title: state.title,
+      description: state.description,
       tag: state.tag,
-      price: state.price
+      price: state.price,
+      image:state.image
     });
     const config = {
       headers,
@@ -176,7 +167,7 @@ export default function Sell() {
           <label for="userid">Image</label>
           <input
             onChange={(event) => {
-              setFile(event.target.files);
+              uploadImage(event.target.files)
             }}
             multiple={true}
             type="file"
