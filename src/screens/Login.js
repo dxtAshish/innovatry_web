@@ -35,7 +35,7 @@ export default function Login() {
     );
     const response_json = await response.json();
     console.log(response_json, "here is response");
-    localStorage.setItem("token", response_json.token);
+    localStorage.setItem("token", response_json.authtoken);
   };
 
   return (

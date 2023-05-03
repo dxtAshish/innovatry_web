@@ -67,10 +67,10 @@ export default function Sell() {
       "auth-token": token,
     };
     const body = JSON.stringify({
-      name: state.firstName + state.lastName,
-      email: state.email,
-      password: state.password,
-      image: imageUrl,
+      title:state.title,
+      description:state.description,
+      tag: state.tag,
+      price: state.price
     });
     const config = {
       headers,
@@ -84,7 +84,6 @@ export default function Sell() {
 
     const response_json = await response.json();
     console.log(response_json, "here is response");
-    localStorage.setItem("token", response_json.token);
   };
 
   const updateState = (event) => {
@@ -102,10 +101,11 @@ export default function Sell() {
               onChange={(e) => {
                 updateState(e);
               }}
+              value={state.title}
               type="text"
               class="form-control"
               id="name"
-              name="name"
+              name="title"
             />
           </div>
 
@@ -115,6 +115,7 @@ export default function Sell() {
               onChange={(e) => {
                 updateState(e);
               }}
+              value={state.description}
               class="form-control"
               id="description"
               name="description"
@@ -127,6 +128,7 @@ export default function Sell() {
               onChange={(e) => {
                 updateState(e);
               }}
+              value={state.tag}
               type="text"
               class="form-control"
               id="tag"
@@ -140,7 +142,8 @@ export default function Sell() {
               onChange={(e) => {
                 updateState(e);
               }}
-              type="number"
+              value={state.price}
+              type="text"
               class="form-control"
               id="price"
               name="price"
