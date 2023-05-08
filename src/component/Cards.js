@@ -25,16 +25,16 @@ const Cards = () => {
     setProducts(response_json.data);
   };
   return (
-    <div class="container">
-      <div class="row">
-        {products &&
-          products.map((value, index) => {
-            return <Card key={index} data={value} />;
-          })}
-      </div>
-
-      
+    // <div class="container">
+    <div class="row">
+      {products &&
+        products.map((value, index) => {
+          return <Card key={index} data={value} />;
+        })}
     </div>
+
+
+    // </div>
   );
 };
 
