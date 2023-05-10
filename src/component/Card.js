@@ -16,12 +16,12 @@ export default function Card({ data }) {
     //   </div>
     // </div>
     // <Link to={`/Buy/${_id}`}>
-    <Link to={`/Buy/${_id}`} className="col-lg-4 col-md-12 mb-4">
-      <div className="card">
+    <Link to={`/Buy/${_id}`} className="col-lg-3 col-md-6 mb-4">
+      <div className="card" style={{width:"250px"}}>
         <div className="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
           data-mdb-ripple-color="light">
           <img src={image}
-            className="w-100" style={{"height":"400px"}} />
+            className="w-100" style={{"height":"250px"}} />
           <a href="#!">
             <div className="mask">
               <div className="d-flex justify-content-start align-items-end h-100">

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import FormData from "form-data";
-import axios from "axios";
+
 
 export default function Sell() {
   const [state, setState] = useState({
@@ -9,6 +9,7 @@ export default function Sell() {
     tag: "",
     price: "",
     image: "",
+    category:""
   });
 
   const [imageUrl, setImageUrl] = useState();
@@ -61,7 +62,8 @@ export default function Sell() {
       description: state.description,
       tag: state.tag,
       price: state.price,
-      image:state.image
+      image:state.image,
+      category:state.category
     });
     const config = {
       headers,
@@ -97,6 +99,7 @@ export default function Sell() {
               class="form-control"
               id="name"
               name="title"
+              placeholder="name"
             />
           </div>
 
@@ -110,6 +113,7 @@ export default function Sell() {
               class="form-control"
               id="description"
               name="description"
+              placeholder="description"
             ></textarea>
           </div>
 
@@ -124,6 +128,21 @@ export default function Sell() {
               class="form-control"
               id="tag"
               name="tag"
+              placeholder="choose one innovatory or scapyard "
+            />
+          </div>
+          <div class="form-group">
+            <label for="tag">category:</label>
+            <input
+              onChange={(e) => {
+                updateState(e);
+              }}
+              value={state.category}
+              type="text"
+              class="form-control"
+              id="category"
+              name="category"
+              placeholder="choose your category- (electronics, home appliance, fruniture, others)"
             />
           </div>
 
@@ -138,6 +157,7 @@ export default function Sell() {
               class="form-control"
               id="price"
               name="price"
+              placeholder="price"
             />
           </div>
           {/* <div class="form-group">
@@ -153,15 +173,7 @@ export default function Sell() {
             />
           </div> */}
 
-          <button
-            type="submit"
-            class="btn btn-primary"
-            onClick={(e) => {
-              addProduct(e);
-            }}
-          >
-            Submit
-          </button>
+      
         </form>
         <div class="form-group">
           <label for="userid">Image</label>
@@ -175,6 +187,15 @@ export default function Sell() {
             id="userid"
           />
         </div>
+        <button
+            type="submit"
+            class="btn btn-primary"
+            onClick={(e) => {
+              addProduct(e);
+            }}
+          >
+            Submit
+          </button>
       </div>
     </>
   );
