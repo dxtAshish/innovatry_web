@@ -25,7 +25,7 @@ const Cards = () => {
     setProducts(response_json.data);
   };
   return (
-    // <div class="container">
+     <div class="container">
     <div class="row">
       {products &&
         products.map((value, index) => {
@@ -34,7 +34,7 @@ const Cards = () => {
     </div>
 
 
-    // </div>
+     </div>
   );
 };
 
