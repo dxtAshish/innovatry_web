@@ -51,27 +51,27 @@ function NavBar() {
                 </Link>
                 <ul class="dropdown-menu">
                   <li>
-                    <Link class="dropdown-item" to="/">
+                    <Link class="dropdown-item" to="/category/homeappliances">
                       home appliances
                     </Link>
                   </li>
                   <li>
-                    <Link class="dropdown-item" to="/">
+                    <Link class="dropdown-item" to="/category/furniture">
                       furniture
                     </Link>
                   </li>
                   <li>
-                    <Link class="dropdown-item" to="/">
+                    <Link class="dropdown-item" to="/category/electronics">
                       electronics
                     </Link>
                   </li>
                   <li>
-                    <Link class="dropdown-item" to="/">
+                    <Link class="dropdown-item" to="/category/game">
                       game
                     </Link>
                   </li>
                   <li>
-                    <Link class="dropdown-item" to="/">
+                    <Link class="dropdown-item" to="/category/others">
                       others
                     </Link>
                   </li>
@@ -88,7 +88,13 @@ function NavBar() {
                 </Link>
               </li>
               {state ? (
-                ""
+                <>
+                 <li className="nav-item">
+                <Link className="nav-link " to="/Profile">
+                  Profile
+                </Link>
+              </li>
+                </>
               ) : (
                 <>
                   <li className="nav-item ">

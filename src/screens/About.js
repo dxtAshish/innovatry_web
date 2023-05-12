@@ -1,39 +1,41 @@
-import React from 'react'
-import NavBar from '../component/NavBar'
-
+import React from "react";
+import NavBar from "../component/NavBar";
+import Footer from "../component/Footer";
 
 export default function About() {
   return (
     <div>
-      <NavBar/>
-      <div class="container mt-5">
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <h1 class="text-center mb-5">About Us</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non dui
-            eget enim bibendum faucibus. Sed tristique dolor sed justo gravida, sed
-            maximus nulla euismod. Proin aliquam urna id libero congue commodo.
-            Aenean malesuada mi enim, non convallis orci malesuada ac. Suspendisse
-            ut orci vitae felis molestie aliquam at sit amet lacus. Sed vel purus
-            aliquam, venenatis sapien sit amet, pellentesque nunc. In at nunc ut
-            lorem feugiat tincidunt. Morbi malesuada, urna nec commodo feugiat,
-            nisl leo consequat sem, eget imperdiet sapien arcu id mi. Vestibulum
-            quis pulvinar nulla.
-          </p>
-          <p>
-            Vestibulum quis justo lectus. Vestibulum ante ipsum primis in faucibus
-            orci luctus et ultrices posuere cubilia curae; Integer bibendum
-            hendrerit commodo. Donec imperdiet arcu vel massa suscipit viverra.
-            Pellentesque sed justo risus. Etiam lacinia eleifend sapien, eget
-            vulputate ante. Sed volutpat congue libero eu dapibus. Integer ornare
-            odio et felis accumsan, eget hendrerit magna interdum. Sed sit amet
-            lobortis justo, eu rutrum orci.
-          </p>
+      <NavBar />
+      <div className="container mt-5">
+        <div className="row justify-content-center">
+          <div className="col-md-8">
+            <h1 className="text-center mb-5">About Us</h1>
+            <p>
+              A Innovatory scrapyard website is a platform that allows users to
+              buy and sell scrap metal and other materials. It is typically used
+              by individuals or businesses looking to dispose of unwanted items,
+              such as old cars, appliances, and industrial equipment, and by
+              those who are interested in purchasing these materials for
+              recycling or repurposing. The website may feature a searchable
+              inventory of available scrap materials, including descriptions and
+              photographs of each item, along with pricing information and
+              contact details for the seller. Users may also be able to post
+              their own listings of items they wish to sell or request items
+              they are interested in purchasing. In addition to facilitating
+              transactions between buyers and sellers, a scrapyard website may
+              also provide resources and information about the scrap metal
+              industry, including news and updates on market trends,
+              regulations, and best practices for recycling and waste
+              management. Overall, a well-designed scrapyard website can serve
+              as a valuable tool for anyone involved in the scrap metal
+              industry, providing a convenient and efficient way to buy and sell
+              materials and stay informed about the latest developments in this
+              field.
+            </p>
+          </div>
         </div>
       </div>
-    </div> 
-     
+      <Footer />
     </div>
-  )
+  );
 }

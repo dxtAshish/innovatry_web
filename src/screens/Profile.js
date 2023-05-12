@@ -109,6 +109,7 @@ const Orders = () => {
             <h5 class="card-title">{value.product_id.title}</h5>
             <p class="card-text">{value.product_id.description}</p>
           </div>
+          <hr/>
           <h4>order detail</h4>
           {/* <img src={value.user.name} class="card-img-top w-74 h-75" alt="Image" style={{"height":"200px","width":"200px"}} /> */}
             <h5 class="card-title">{value.user_id.email}</h5>
@@ -183,7 +184,7 @@ export default function Profile() {
       {/* <!-- Sidebar --> */}
       <div class="col-md-3">
         <div class="sidebar">
-          <h3>Sidebar</h3>
+          <h3>deshboard</h3>
           <ul class="list-group">
             <li class={`list-group-item ${profile_url===""?"bg-dark text-white":""} `}><Link to={"/profile"}>Profile</Link></li>
             <li class={`list-group-item ${profile_url==="orders"?"bg-dark text-white":""} `}><Link to={"/profile/orders"}>Orders</Link></li>

@@ -13,7 +13,7 @@ import Category from '../component/Category'
 export default function Home() {
 
   const {
-    category
+    category,tag
   }=useParams()
   return (
     
@@ -24,7 +24,7 @@ export default function Home() {
         {/*<div><Carousal/></div>*/}
         <div><Body/></div>
         {!category?
-        <div className='m-3'><Cards/></div>
+        <div className='m-3'><Cards tag={tag}/></div>
         :<Category/>}
         
         <div><Footer/></div>

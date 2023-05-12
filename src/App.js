@@ -18,8 +18,8 @@ export default function App() {
 <Router>
   <div>
     <Routes>
-     
-      <Route exact path='/' element={<Home/>}/>
+    <Route exact path='/' element={<Home/>}/>
+      <Route exact path='/:tag' element={<Home/>}/>
       <Route exact path='/category/:category' element={<Home/>}/>
       <Route exact path='/Login' element={<Login/>}/>
       <Route exact path='/Signup' element={<Signup/>}/>
