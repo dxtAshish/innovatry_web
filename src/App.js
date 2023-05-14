@@ -12,6 +12,7 @@ import Checkout from './component/Checkout';
 import ProductDetail from './component/ProductDetail';
 import About from './screens/About';
 import SuccessPage from './screens/SuccessPage';
+import Frontpage from './component/Frontpage';
 export default function App() {
   return (
     <>
@@ -31,6 +32,7 @@ export default function App() {
       <Route exact path='/profile/:profile_url' element={<Profile/>}/>
       <Route exact path='/success' element={<SuccessPage/>}/>
       <Route exact path='/About' element={<About/>}/>
+      <Route exact path='/Frontpage' element={<Frontpage/>}/>
 
     </Routes>
   </div>

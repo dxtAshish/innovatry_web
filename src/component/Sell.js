@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import FormData from "form-data";
+import NavBar from "./NavBar";
 
 
 export default function Sell() {
@@ -86,9 +87,12 @@ export default function Sell() {
   };
   return (
     <>
-      <div class="container">
-        <form>
-          <div class="form-group">
+    <div>
+      <NavBar/>
+    </div>
+      <div className="container">
+        <form style={{alignItems:"center",margin:"50px auto",width:"50%"}} className="formBody">
+          <div className="form-group" >
             <label for="name">Name:</label>
             <input
               onChange={(e) => {
@@ -96,28 +100,28 @@ export default function Sell() {
               }}
               value={state.title}
               type="text"
-              class="form-control"
+              className="form-control"
               id="name"
               name="title"
               placeholder="name"
             />
           </div>
 
-          <div class="form-group">
+          <div className="form-group">
             <label for="description">Description:</label>
             <textarea
               onChange={(e) => {
                 updateState(e);
               }}
               value={state.description}
-              class="form-control"
+              className="form-control"
               id="description"
               name="description"
               placeholder="description"
             ></textarea>
           </div>
 
-          <div class="form-group">
+          <div className="form-group">
             <label for="tag">Tag:</label>
             <input
               onChange={(e) => {
@@ -125,13 +129,13 @@ export default function Sell() {
               }}
               value={state.tag}
               type="text"
-              class="form-control"
+              className="form-control"
               id="tag"
               name="tag"
               placeholder="choose one innovatory or scapyard "
             />
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <label for="tag">category:</label>
             <input
               onChange={(e) => {
@@ -139,14 +143,14 @@ export default function Sell() {
               }}
               value={state.category}
               type="text"
-              class="form-control"
+              className="form-control"
               id="category"
               name="category"
               placeholder="choose your category- (electronics, home appliance, fruniture, others)"
             />
           </div>
 
-          <div class="form-group">
+          <div className="form-group">
             <label for="price">Price:</label>
             <input
               onChange={(e) => {
@@ -154,20 +158,20 @@ export default function Sell() {
               }}
               value={state.price}
               type="text"
-              class="form-control"
+              className="form-control"
               id="price"
               name="price"
               placeholder="price"
             />
           </div>
-          {/* <div class="form-group">
+          {/* <div className="form-group">
             <label for="price">Price:</label>
             <input
               onChange={(e) => {
                 updateState(e);
               }}
               type="number"
-              class="form-control"
+              className="form-control"
               id="price"
               name="price"
             />
@@ -175,7 +179,7 @@ export default function Sell() {
 
       
         </form>
-        <div class="form-group">
+        <div className="form-group" style={{alignItems:"center",margin:"50px auto",width:"50%"}}>
           <label for="userid">Image</label>
           <input
             onChange={(event) => {
@@ -183,16 +187,17 @@ export default function Sell() {
             }}
             multiple={true}
             type="file"
-            class="form-control"
+            className="form-control"
             id="userid"
           />
         </div>
         <button
             type="submit"
-            class="btn btn-primary"
+            className="btn btn-primary"
             onClick={(e) => {
               addProduct(e);
             }}
+            style={{alignItems:"center",margin:"50px left"}}
           >
             Submit
           </button>

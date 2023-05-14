@@ -1,9 +1,23 @@
-import React from 'react'
+import React from "react";
 
 export default function Body() {
   return (
-    <div>
-        <h1 className='tagline'>Buy,Sell and Innovate</h1>
+    <div className="container textBody">
+      <h1>
+        {" "}
+        <span className="buyName" style={{ color: "red" }}>
+          <b> Buy</b>
+        </span>{" "}
+        smarter,{" "}
+        <span className="sellName" style={{ color: "pink" }}>
+          <b>sell</b>
+        </span>{" "}
+        better,{" "}
+        <span className="innoName" style={{ color: "green" }}>
+          <b>innovate</b>{" "}
+        </span>
+        faster
+      </h1>
     </div>
-  )
+  );
 }

@@ -95,3 +95,33 @@ body {
 .sidebar ul li a:hover {
   background-color: #ddd;
 }
+
+.card{
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+.card:hover{
+  box-shadow: 0 10px 10px rgba(207, 14, 14, 0.488);
+}
+.textBody{
+  width: 50%;
+  
+  margin: 20px auto;
+  text-align: center;
+ 
+}
+.buyName:hover{
+  box-shadow: 0 10px 10px rgba(207, 14, 14, 0.488);
+  border-radius: 40px;
+}
+.sellName:hover{
+  box-shadow: 0 10px 10px rgba(229, 102, 155, 0.644);
+  border-radius: 40px;
+}
+.innoName:hover{
+   box-shadow: 0 10px 0px rgba(24, 207, 14, 0.488);
+   border-radius: 40px;
+
+}
+.formBody{
+  box-shadow: 0 10px 10px rgba(14, 136, 207, 0.349);
+}

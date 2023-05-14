@@ -16,12 +16,12 @@ export default function Card({ data }) {
     //   </div>
     // </div>
     // <Link to={`/Buy/${_id}`}>
-    <Link to={`/Buy/${_id}`} className="col-lg-3 col-md-6 mb-4">
-      <div className="card" style={{width:"250px",height:"410px",margin:"0px auto"}}>
+    <Link to={`/Buy/${_id}`} className="col-lg-2 col-md-6 mb-4">
+      <div className="card" style={{width:"200px",height:"320px",margin:"0px auto"}}>
         <div className="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
           data-mdb-ripple-color="light">
           <img src={image}
-            className="w-100" style={{"height":"245px"}} />
+            className="w-100" style={{"height":"200px" }} />
           <Link to="#!">
             <div className="mask">
               <div className="d-flex justify-content-start align-items-end h-100">
@@ -37,9 +37,9 @@ export default function Card({ data }) {
           <Link to="" className="text-reset">
             <h5 className="card-title mb-3">{title}</h5>
           </Link>
-          <Link to="" className="text-reset">
-            <p>{description}</p>
-          </Link>
+          {/* <Link to="" className="text-reset"> */}
+            {/* <p>{description}</p> */}
+          {/* </Link> */}
           <h6 className="mb-3">{price}</h6>
         </div>
       </div>
