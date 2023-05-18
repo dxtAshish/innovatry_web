@@ -42,10 +42,10 @@ export default function Login() {
     <div>
       <NavBar />
       <div className="Login d-flex flex-row row">
-      <div className="Login-text col-3" >
+      <div className="Login-text col-md-3" >
         <h1>welcome to <span style={{"color":"red"}}>INNOVATORY SCRAPYARD</span></h1>
       </div>
-      <div className="Login-form col-3">
+      <div className="Login-form col-md-3">
       <form className="container Login">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">

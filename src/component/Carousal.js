@@ -1,14 +1,14 @@
 import React from "react";
-
+import imge from "../image/imge.jpg";
+import title from "../image/title.jpeg"
 export default function Carousal() {
   return (
     <div>
-      <div id="carouselExampleFade" className="carousel slide carousel-fade">
+      {/* <div id="carouselExampleFade" className="carousel slide carousel-fade">
         <div className="carousel-inner " style={{"height":"500px"}}>
           <div className="carousel-item active">
             <img
-              src="https://media.istockphoto.com/id/1372577388/photo/old-electronic-devices-on-a-dark-background-the-
-              concept-of-recycling-and-disposal-of.jpg?s=612x612&w=is&k=20&c=PdZCH3l6WTTqkZjR4qtK-HBff2BYcO50gOPefchdPsg="
+              src={imge}
               className="carImage"
               alt="..."
             />
@@ -23,8 +23,7 @@ export default function Carousal() {
           </div>
           <div className="carousel-item">
             <img
-              src="https://images.unsplash.com/photo-1528323273322-d81458248d40?ixlib=rb-4.0.
-              3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1858&q=80"
+              src=""
               className="carImage"
               alt="..."
             />
@@ -54,7 +53,30 @@ export default function Carousal() {
           ></span>
           <span className="visually-hidden">Next</span>
         </button>
-      </div>
+      </div> */}
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner" data-mdb-interval="1000" style={{"height":"500px"}}>
+    <div class="carousel-item active">
+      <img  src="https://images.unsplash.com/photo-1528323273322-d81458248d40?ixlib=rb-4.0.
+              3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1858&q=80" class="d-block w-100" alt="..."/>
+    </div>
+    <div class="carousel-item " data-mdb-interval="1000">
+      <img src={imge} class="d-block w-100" alt="..."/>
+     
+    </div>
+    <div class="carousel-item" data-mdb-interval="1000">
+      <img src={title} class="d-block w-100" alt="..." />
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
     </div>
   );
 }

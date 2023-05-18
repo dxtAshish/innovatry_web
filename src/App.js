@@ -13,6 +13,7 @@ import ProductDetail from './component/ProductDetail';
 import About from './screens/About';
 import SuccessPage from './screens/SuccessPage';
 import Frontpage from './component/Frontpage';
+import Body from './component/Body';
 export default function App() {
   return (
     <>
@@ -33,6 +34,9 @@ export default function App() {
       <Route exact path='/success' element={<SuccessPage/>}/>
       <Route exact path='/About' element={<About/>}/>
       <Route exact path='/Frontpage' element={<Frontpage/>}/>
+      <Route exact path='/Body' element={<Body/>}/>
+      {/* <Route exact path='/scrapyard' element={<Scrapyard/>}/> */}
+
 
     </Routes>
   </div>

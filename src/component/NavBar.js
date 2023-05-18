@@ -16,7 +16,7 @@ function NavBar() {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-dark-subtle ">
+      <nav className="navbar navbar-expand-lg bg-dark " data-bs-theme="dark" style={{position:"top"}}>
         <div className="container-fluid">
           <Link className="navbar-brand logo" to="/">
             INNOVATORY SCRAPYARD
@@ -67,7 +67,7 @@ function NavBar() {
                   </li>
                   <li>
                     <Link class="dropdown-item" to="/category/game">
-                      game
+                      toys
                     </Link>
                   </li>
                   <li>
@@ -85,6 +85,16 @@ function NavBar() {
               <li className="nav-item">
                 <Link className="nav-link " to="/Sell">
                   Sell
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link " to="/scrapyard">
+                  Scrapyard
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link " to="/innovatory">
+                  Innovatory
                 </Link>
               </li>
               {state ? (

@@ -2,14 +2,18 @@ import React from "react";
 
 export default function Body() {
   return (
+    <>
+    <div className="container-fluid">
+      {/* <img src={imge} alt="" style={{width:"100%",height:"500px",position: "static" }} className="mt-4 " /> */}
+    </div>
     <div className="container textBody">
       <h1>
         {" "}
-        <span className="buyName" style={{ color: "red" }}>
+        <span className="buyName" style={{ color: "green" }}>
           <b> Buy</b>
         </span>{" "}
         smarter,{" "}
-        <span className="sellName" style={{ color: "pink" }}>
+        <span className="sellName" style={{ color: "green" }}>
           <b>sell</b>
         </span>{" "}
         better,{" "}
@@ -19,5 +23,6 @@ export default function Body() {
         faster
       </h1>
     </div>
+    </>
   );
 }

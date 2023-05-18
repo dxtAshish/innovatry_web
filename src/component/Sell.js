@@ -91,9 +91,9 @@ export default function Sell() {
       <NavBar/>
     </div>
       <div className="container">
-        <form style={{alignItems:"center",margin:"50px auto",width:"50%"}} className="formBody">
-          <div className="form-group" >
-            <label for="name">Name:</label>
+        <form style={{alignItems:"center",margin:"40px auto",width:"50%",padding:"20px"}} className="formBodySell">
+          <div className="form-group m-2" >
+            <label for="name" className="m-2">Product:</label>
             <input
               onChange={(e) => {
                 updateState(e);
@@ -107,8 +107,8 @@ export default function Sell() {
             />
           </div>
 
-          <div className="form-group">
-            <label for="description">Description:</label>
+          <div className="form-group m-2">
+            <label for="description" className="m-2">Description:</label>
             <textarea
               onChange={(e) => {
                 updateState(e);
@@ -121,8 +121,8 @@ export default function Sell() {
             ></textarea>
           </div>
 
-          <div className="form-group">
-            <label for="tag">Tag:</label>
+          <div className="form-group m-2">
+            <label for="tag" className="m-2">Tag:</label>
             <input
               onChange={(e) => {
                 updateState(e);
@@ -135,8 +135,8 @@ export default function Sell() {
               placeholder="choose one innovatory or scapyard "
             />
           </div>
-          <div className="form-group">
-            <label for="tag">category:</label>
+          <div className="form-group m-2">
+            <label for="tag" className="m-2">category:</label>
             <input
               onChange={(e) => {
                 updateState(e);
@@ -146,12 +146,12 @@ export default function Sell() {
               className="form-control"
               id="category"
               name="category"
-              placeholder="choose your category- (electronics, home appliance, fruniture, others)"
+              placeholder="choose your category- (electronics, homeappliance, fruniture, others)"
             />
           </div>
 
-          <div className="form-group">
-            <label for="price">Price:</label>
+          <div className="form-group m-2">
+            <label for="price" className="m-2">Price:</label>
             <input
               onChange={(e) => {
                 updateState(e);
@@ -179,7 +179,7 @@ export default function Sell() {
 
       
         </form>
-        <div className="form-group" style={{alignItems:"center",margin:"50px auto",width:"50%"}}>
+        <div className="form-group" style={{alignItems:"center",margin:"0px auto",width:"50%"}}>
           <label for="userid">Image</label>
           <input
             onChange={(event) => {

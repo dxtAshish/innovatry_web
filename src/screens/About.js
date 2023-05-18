@@ -8,9 +8,11 @@ export default function About() {
       <NavBar />
       <div className="container mt-5">
         <div className="row justify-content-center">
-          <div className="col-md-8">
+          <div className="col-md-8" style={{backgroundColor:"whitesmoke"}}>
             <h1 className="text-center mb-5">About Us</h1>
             <p>
+              <h1>Buy, Sell, and Innovate</h1>
+              <hr/>
               A Innovatory scrapyard website is a platform that allows users to
               buy and sell scrap metal and other materials. It is typically used
               by individuals or businesses looking to dispose of unwanted items,

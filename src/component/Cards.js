@@ -4,7 +4,8 @@ import Card from "./Card";
 const Cards = ({ tag }) => {
   useEffect(() => {
     fetchProduct();
-  }, []);
+  }, [tag]);
+
   const [products, setProducts] = useState();
 
   const fetchProduct = async () => {
@@ -45,7 +46,7 @@ const Cards = ({ tag }) => {
   };
   return (
     <div className="container justify-around">
-      <div className="row">
+      <div className="grid-container" >
         {products &&
           products.map((value, index) => {
             return <Card key={index} data={value} />;

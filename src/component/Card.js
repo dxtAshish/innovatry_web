@@ -16,8 +16,8 @@ export default function Card({ data }) {
     //   </div>
     // </div>
     // <Link to={`/Buy/${_id}`}>
-    <Link to={`/Buy/${_id}`} className="col-lg-2 col-md-6 mb-4">
-      <div className="card" style={{width:"200px",height:"320px",margin:"0px auto"}}>
+    <Link to={`/Buy/${_id}`} className=" grid-item mb-5">
+      <div className="card" style={{width:"200px",height:"300px",margin:"0px auto"}}>
         <div className="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
           data-mdb-ripple-color="light">
           <img src={image}
@@ -25,7 +25,7 @@ export default function Card({ data }) {
           <Link to="#!">
             <div className="mask">
               <div className="d-flex justify-content-start align-items-end h-100">
-                <h5><span className="badge bg-primary ms-2">New</span></h5>
+                <h6><span className="badge bg-primary ms-2">New</span></h6>
               </div>
             </div>
             <div className="hover-overlay">
@@ -35,12 +35,12 @@ export default function Card({ data }) {
         </div>
         <div className="card-body">
           <Link to="" className="text-reset">
-            <h5 className="card-title mb-3">{title}</h5>
-          </Link>
+            <h6 className="card-title ">{title}</h6>
+          </Link> 
           {/* <Link to="" className="text-reset"> */}
             {/* <p>{description}</p> */}
           {/* </Link> */}
-          <h6 className="mb-3">{price}</h6>
+          <h6 className="">&#8377;: {price}</h6>
         </div>
       </div>
     </Link>

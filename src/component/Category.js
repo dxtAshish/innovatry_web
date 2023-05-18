@@ -34,8 +34,8 @@ const Category = () => {
     setProducts(response_json.data);
   };
   return (
-    // <div class="container">
-    <div class="row">
+     <div class="container justify-around">
+    <div class="grid-container">
       {products &&
         products.map((value, index) => {
           return <Card key={index} data={value} />;
@@ -43,7 +43,7 @@ const Category = () => {
     </div>
 
 
-    // </div>
+     </div>
   );
 };
 

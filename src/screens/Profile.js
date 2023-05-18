@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import NavBar from "../component/NavBar";
 
 
 const Products = () => {
@@ -162,7 +163,9 @@ export default function Profile() {
 
 
   return (
-    <div className="d-flex">
+    <>
+    <NavBar/>
+    <div className="d-flex mt-2">
       {/* {user ? (
         <div>
           <h1>{user.name}</h1>
@@ -201,7 +204,9 @@ export default function Profile() {
           <Products/>: profile_url==="orders"?  <Orders/>:
           //  {user ? (
             <div>
+              <label htmlFor="name" style={{color:"whitesmoke"}}><b>NAME:</b></label>
               <h1>{user.name}</h1>
+              <label htmlFor="name" style={{color:"white"}}><b>EMAIL:</b></label>
               <p>{user.email}</p>
               {/* <button
                 onClick={openCard}
@@ -220,6 +225,7 @@ export default function Profile() {
     </div>
   </div>
     </div>
+    </>
   );
 }
 
