@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '../component/Card'
+
 import Footer from '../component/Footer'
 
 import NavBar from '../component/NavBar'
@@ -21,7 +21,7 @@ export default function Home() {
 
        
         <div><NavBar/></div>
-        <div><Carousal/></div>
+        <div className='mt-2'><Carousal/></div>
         <div><Body/></div>
         {!category?
         <div className='m-3'><Cards tag={tag}/></div>

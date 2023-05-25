@@ -204,9 +204,9 @@ export default function Profile() {
           <Products/>: profile_url==="orders"?  <Orders/>:
           //  {user ? (
             <div>
-              <label htmlFor="name" style={{color:"whitesmoke"}}><b>NAME:</b></label>
+              <label htmlFor="name" style={{color:"gray"}}><b>NAME:</b></label>
               <h1>{user.name}</h1>
-              <label htmlFor="name" style={{color:"white"}}><b>EMAIL:</b></label>
+              <label htmlFor="name" style={{color:"gray"}}><b>EMAIL:</b></label>
               <p>{user.email}</p>
               {/* <button
                 onClick={openCard}

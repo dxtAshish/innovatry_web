@@ -3,6 +3,7 @@ import FormData from "form-data";
 import NavBar from "./NavBar";
 
 
+
 export default function Sell() {
   const [state, setState] = useState({
     title: "",
@@ -78,6 +79,13 @@ export default function Sell() {
 
     const response_json = await response.json();
     console.log(response_json, "here is response");
+    alert("product is added");
+     
+
+
+
+    
+   
   };
 
   const updateState = (event) => {
@@ -91,6 +99,18 @@ export default function Sell() {
       <NavBar/>
     </div>
       <div className="container">
+      <div className="form-group" style={{alignItems:"center",margin:"0px auto",width:"50%"}}>
+          <label for="userid">Image</label>
+          <input
+            onChange={(event) => {
+              uploadImage(event.target.files)
+            }}
+            multiple={true}
+            type="file"
+            className="form-control"
+            id="userid"
+          />
+        </div>
         <form style={{alignItems:"center",margin:"40px auto",width:"50%",padding:"20px"}} className="formBodySell">
           <div className="form-group m-2" >
             <label for="name" className="m-2">Product:</label>
@@ -179,18 +199,7 @@ export default function Sell() {
 
       
         </form>
-        <div className="form-group" style={{alignItems:"center",margin:"0px auto",width:"50%"}}>
-          <label for="userid">Image</label>
-          <input
-            onChange={(event) => {
-              uploadImage(event.target.files)
-            }}
-            multiple={true}
-            type="file"
-            className="form-control"
-            id="userid"
-          />
-        </div>
+       
         <button
             type="submit"
             className="btn btn-primary"
@@ -198,6 +207,7 @@ export default function Sell() {
               addProduct(e);
             }}
             style={{alignItems:"center",margin:"50px left"}}
+            data-target="#exampleModalCenter"
           >
             Submit
           </button>

@@ -1,6 +1,9 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
 *{
   margin: 0px;
   padding: 0px;
+  font-family: 'Fira Sans', sans-serif;
 }
 a{
   text-decoration: none;
@@ -9,7 +12,7 @@ a{
 
 body {
   font-family: 'Roboto Condensed', sans-serif;
-  background-color: rgba(107, 104, 103, 0.651)
+  background-color: rgba(242, 238, 238, 0.974)
 }
 
 .hedding {
@@ -96,9 +99,9 @@ body {
   background-color: #ddd;
 }
 
-.card{
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
-}
+ .card{
+ border: none;
+} 
 .card:hover{
   box-shadow: 0 10px 10px rgb(0, 0, 0);
 }
@@ -149,4 +152,11 @@ background-color: white
   .grid-container {
     grid-template-columns: 1fr;
   }
+}
+.about-us-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }

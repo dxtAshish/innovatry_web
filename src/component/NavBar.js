@@ -16,7 +16,7 @@ function NavBar() {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-dark " data-bs-theme="dark" style={{position:"top"}}>
+      <nav className="navbar navbar-expand-lg bg-none " data-bs-theme="none" style={{position:"top"}}>
         <div className="container-fluid">
           <Link className="navbar-brand logo" to="/">
             INNOVATORY SCRAPYARD

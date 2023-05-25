@@ -17,7 +17,7 @@ export default function Card({ data }) {
     // </div>
     // <Link to={`/Buy/${_id}`}>
     <Link to={`/Buy/${_id}`} className=" grid-item mb-5">
-      <div className="card" style={{width:"200px",height:"300px",margin:"0px auto"}}>
+      <div className="card" style={{width:"240px",height:"300px",margin:"0px auto"}}>
         <div className="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
           data-mdb-ripple-color="light">
           <img src={image}

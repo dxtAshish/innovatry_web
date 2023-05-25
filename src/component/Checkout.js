@@ -29,6 +29,7 @@ const Checkout = () => {
     state: "",
     pin_code: "",
     mobile_no: "",
+    mode:0
   });
 
   const updateState = (event) => {
@@ -67,6 +68,68 @@ const Checkout = () => {
     console.log(response_json);
     if (response_json.status === 201) {
       window.location.replace("/success");
+    }
+  };
+
+  function loadScript(src) {
+    return new Promise((resolve) => {
+        const script = document.createElement("script");
+        script.src = src;
+        script.onload = () => {
+            resolve(true);
+        };
+        script.onerror = () => {
+            resolve(false);
+        };
+        document.body.appendChild(script);
+    });
+}
+
+  const payment = async (e) => {
+    const res = await loadScript(
+      "https://checkout.razorpay.com/v1/checkout.js"
+  );
+    console.log("here 66")
+    const headers = {
+      "Content-Type": "application/json",
+      // "auth-token": token,
+    };
+    const body = JSON.stringify({
+      amount: productData.price*100,
+    });
+    const config = {
+      headers,
+      body,
+      method: "POST",
+    };
+    const response = await fetch(`http://localhost:5000/api/payment`, config);
+    const responseJson = await response.json();
+    if (responseJson.status === 201) {
+      const options = {
+        key: "rzp_test_4OOAMCjqTxkzHV",
+        amount: productData.price*100,
+        currency: "INR",
+        name: "innovatry",
+        order_id: responseJson.data.id,
+        handler: (res) => {
+          console.log(res);
+          const razorpay = {
+            razorpay_order_id: res.razorpay_order_id,
+            razorpay_payment_id: res.razorpay_payment_id,
+            razorpay_signature: res.razorpay_signature,
+          };
+
+         console.log("95 success")
+         submitFunc(e)
+          // orderPlace({cart,data,payment_mode:1,razorpay})
+        },
+        theme: {
+          color: "#E3E6F3",
+        },
+      };
+
+      const paymentObject = new window.Razorpay(options);
+      paymentObject.open();
     }
   };
 
@@ -235,15 +298,31 @@ const Checkout = () => {
                                   type="radio"
                                   id="address"
                                   name="mobile_no"
-                                  value={state.mobile_no}
-                                  // onChange={(event) => {
-                                  //   updateState(event);
-                                  // }}
+                                  
+                                  onChange={(event) => {
+                                    setState({...state,mode:0})
+                                  }}
                                   required
                                   // class="form-control form-control-lg"
                                 />
                                 <label class="form-label" for="typeText">
                                   Cash on delivery
+                                </label>
+                              </div>
+                              <div class="form-outline form-white">
+                                <input
+                                  type="radio"
+                                  id="address"
+                                  name="mobile_no"
+                                  // value={state}
+                                  onChange={(event) => {
+                                    setState({...state,mode:1})
+                                  }}
+                                  required
+                                  // class="form-control form-control-lg"
+                                />
+                                <label class="form-label" for="typeText">
+                                  Online Payment
                                 </label>
                               </div>
                             </div>
@@ -276,7 +355,8 @@ const Checkout = () => {
                         >
                           <div
                             onClick={(e) => {
-                              submitFunc(e);
+                              state.mode===1?
+                              payment(e):submitFunc(e)
                             }}
                             class="d-flex justify-content-between"
                           >
